@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html","./src/**/*.{vue,js}"],
+  safelist: [
+    {
+      pattern: /bg-+/, // 👈  This includes bg of all colors and shades
+    },
+  ],
   darkMode: false, // or 'media' or 'class'
     theme: {
       extend: {},
